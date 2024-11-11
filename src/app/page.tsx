@@ -11,13 +11,16 @@ import Footer from "@/components/footer";
 import SpeedDial from "@/components/action-button";
 
 
+
 export default function Home() {
+
   return (
     <div className="bg-primary-light dark:bg-primary-dark ">
-      <SpeedDial />
+
 
       {/* main container  */}
       <main className="h-full relative">
+        <SpeedDial />
         <TopVectorSVG className="absolute top-0 left-0 z-[1] w-full md:w-fit" />
         {/* top nav  */}
         <Navigation />

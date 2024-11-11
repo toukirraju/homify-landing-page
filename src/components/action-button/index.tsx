@@ -1,17 +1,26 @@
-
+"use client"
 import { Icon } from '@iconify/react/dist/iconify.js';
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from '../Modal';
-import { ThemeMode, ThemePalette, ThemePreset } from 'twr-theme';
+import dynamic from 'next/dynamic';
+
+const ThemeMode = dynamic(() => import('twr-theme').then(mod => mod.ThemeMode), { ssr: false });
+const ThemePalette = dynamic(() => import('twr-theme').then(mod => mod.ThemePalette), { ssr: false });
+const ThemePreset = dynamic(() => import('twr-theme').then(mod => mod.ThemePreset), { ssr: false });
 
 const SpeedDial = () => {
+    const [isClient, setIsClient] = useState(false);
     const [open, setOpen] = useState(false);
-
     const [appearanceShow, setAppearanceShow] = useState(false);
     const [colorPresetShow, setColorPresetShow] = useState(false);
     const [themeMode, setThemeMode] = useState(false);
 
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
+    if (!isClient) return null; // Avoid server-side rendering issues
 
     return (
         <div className="fixed bottom-8 right-8 space-y-5 z-50">
@@ -35,7 +44,6 @@ const SpeedDial = () => {
                 </Modal>
 
                 <button onClick={() => setAppearanceShow(true)} className="bg-primary-500 text-white p-3 rounded-full shadow-lg hover:bg-primary-600 transition-colors">
-                    {/* appearance  */}
                     <Icon icon="ic:twotone-color-lens" className='text-2xl' />
                 </button>
                 <Modal isOpen={appearanceShow} onClose={() => setAppearanceShow(false)}>
@@ -50,7 +58,6 @@ const SpeedDial = () => {
                     { "rotate-45": open }
                 )}
             >
-                {/* <FaPlus /> */}
                 <Icon icon="akar-icons:plus" />
             </button>
         </div>
