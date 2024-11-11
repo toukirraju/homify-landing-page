@@ -6,8 +6,6 @@ import Description from '../Description'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import UserInfo from '../UserInfo'
 import Button from '../Button'
-import Image from 'next/image'
-import { heroimg } from '@/assets'
 import { VideoCarousel } from '../carousel'
 
 const Details = () => {

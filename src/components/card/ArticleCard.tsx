@@ -2,7 +2,6 @@ import Image from 'next/image'
 import React from 'react'
 import UserInfo from '../UserInfo'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import { heroimg } from '@/assets'
 
 const ArticleCard = ({ artical }: {
     artical?: {
@@ -23,7 +22,7 @@ const ArticleCard = ({ artical }: {
         <div className=" flex items-center flex-col md:flex-row gap-6">
             {/* image section  */}
             <div className="hidden md:block h-[180px] max-w-[500px] rounded-xl">
-                <Image src={image || ''} width={300} height={200} alt="article" className="max-w-[500px] h-full object-cover rounded-xl  dark:brightness-75" />
+                <Image src={image || ''} width={300} height={200} alt={alt || ""} className="max-w-[500px] h-full object-cover rounded-xl  dark:brightness-75" />
             </div>
             {/* content section  */}
             <div className="space-y-1 md:space-y-4 w-full">

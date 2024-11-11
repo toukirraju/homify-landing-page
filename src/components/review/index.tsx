@@ -1,9 +1,6 @@
 import React from 'react'
 import SectionTitle from '../headers/SectionTitle'
 import SectionHeading from '../headers/SectionHeading'
-import Image from 'next/image'
-import { heroimg } from '@/assets'
-import UserInfo from '../UserInfo'
 import ReviewCarousel from '../carousel/ReviewCarousel'
 
 const Review = () => {

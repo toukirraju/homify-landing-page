@@ -56,7 +56,6 @@ const config: Config = {
   // plugins: [],
   plugins: [
     plugin(({ addBase, theme }) => {
-      console.log(theme('colors.primary.600'));
       addBase({
         '::-webkit-scrollbar': {
           height: '4px',

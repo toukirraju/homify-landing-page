@@ -1,7 +1,6 @@
 import React from 'react'
 
-const useBreakPoint = (ref?: React.MutableRefObject<HTMLDivElement | null>
-) => {
+const useBreakPoint = () => {
     // TODO: Implement useBreakPoint hook for get current screen size and return the value of the screen size
     // breakpoint: 640px, 768px, 1024px, 1280px, 1536px ("mobile", "tablet", "laptop", "desktop", "4k")
     // return value should be one of the following strings: "mobile", "tablet", "laptop", "desktop", "4k"

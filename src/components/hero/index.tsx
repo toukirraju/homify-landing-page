@@ -3,8 +3,6 @@ import Description from '../Description'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import Image from 'next/image'
 import { logo1, logo2, logo3, logo4 } from '@/assets'
-import { ThemeMode } from 'twr-theme'
-import heroimg from '@/assets/heroimg1.png'
 
 const Hero = () => {
     return (
@@ -46,10 +44,6 @@ const Hero = () => {
             </div>
             {/* right side */}
             <div className="hidden md:block flex-shrink-0 flex-grow w-1/2 relative md:rounded-bl-[90px] lg:rounded-bl-[150px] xl:rounded-bl-[250px] overflow-hidden" >
-
-                <div className="absolute bottom-1 right-2 z-10">
-                    <ThemeMode />
-                </div>
                 <Image src={'https://images.unsplash.com/photo-1584738766473-61c083514bf4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'} alt="hero image" fill className="absolute object-cover right-0 dark:brightness-50" />
             </div>
         </section>

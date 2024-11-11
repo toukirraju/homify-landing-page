@@ -26,7 +26,7 @@ const Navigation = () => {
 
     return (
         <div className="flex justify-between items-center pl-6 md:pl-10 xl:pl-40 py-3 fixed top-2 left-1/2 -translate-x-1/2 w-[95%] z-50 rounded-full border border-slate-100  dark:border-slate-700 shadow-md bg-primary-light/50 dark:bg-primary-dark/50 backdrop-blur-md">
-            <Link href={"#/"} className="text-nowrap lg:text-xl xl:text-2xl font-bold text-primary-900 dark:text-primary-50 w-full">Real Estate</Link>
+            <Link href={"#"} className="text-nowrap lg:text-xl xl:text-2xl font-bold text-primary-900 dark:text-primary-50 w-full">Real Estate</Link>
             <div className="flex md:gap-6 items-center justify-end w-full px-3 md:px-0 md:pr-3">
                 <div className="hidden md:flex md:gap-8 items-center w-full lg:pl-32">
                     {navData.map((nav, index) => (
